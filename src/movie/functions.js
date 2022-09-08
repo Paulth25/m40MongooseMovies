@@ -7,7 +7,7 @@ exports.createMovie = async (movieObject) => {
     }
     catch(error){
         console.log("Create Movie Error",error)
-    }
+    }}
 /////DELETE MOVIE BY TITLE FUNCTION/////
 exports.deleteMovie = async (yargsObject) => {
     try{
@@ -31,11 +31,10 @@ exports.deleteMovie = async (yargsObject) => {
     try {
         const updateMovie = await Movie.updateOne(
         { title: yargsObject.title },
-        { $set: { title: yargsObject.title } },
+        { $set: { title: yargsObject.newTitle } },
     )
         console.log(updateMovie)
     }
     catch (error) {
         console.log("Update Movie Error",error)
     }}
-}

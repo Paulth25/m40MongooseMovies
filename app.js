@@ -16,7 +16,7 @@ const app = async (yargsObject) => {
             await readMovie ({title: yargsObject.title, actor: yargsObject.actor})
         }
         else if (yargsObject.update){
-            await updateMovie ({title: yargsObject.title, actor: yargsObject.actor})
+            await updateMovie ({title: yargsObject.newTitle}, {title: yargsObject.newTitle})  /// update here and in app js to pass objects correctly
         }
         else{
             console.log("We are currently experiencing technical difficulties")
